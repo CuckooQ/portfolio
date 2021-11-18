@@ -1,0 +1,27 @@
+@import "./variables.scss";
+
+.title-wrapper {
+  display: flex;
+  justify-content: center;
+
+  .title-logo {
+    width: 4rem;
+    height: 4rem;
+  }
+
+  .title {
+    padding-left: 0.5rem;
+    font-weight: bold;
+
+    :first-child {
+      font-size: 1.3rem;
+    }
+    :last-child {
+      font-size: 1.1rem;
+    }
+  }
+
+  @media (max-width: $screen-size-mobile) {
+    padding-top: $default-padding * 2;
+  }
+}

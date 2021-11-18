@@ -1,0 +1,21 @@
+@import "./variables.scss";
+
+.github-btn {
+  $btn-size: 4rem;
+
+  position: absolute;
+  top: $default-padding;
+  right: 0;
+  width: $btn-size;
+  height: $btn-size;
+  transform: translateX($btn-size * 1 / 2);
+
+  :hover {
+    transition: 0.3s;
+    transform: translateX($btn-size * -1 * 0.4) rotate(-40deg);
+  }
+
+  @media (max-width: $screen-size-mobile) {
+    display: none;
+  }
+}

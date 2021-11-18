@@ -1,0 +1,22 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap");
+
+@import "./variables.scss";
+
+body {
+  margin: 0;
+  color: $primary-font-color;
+  background-color: $primary-background-color;
+  font-family: "Noto Sans KR", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  text-decoration: none;
+  color: $primary-font-color;
+}
+
+::selection {
+  color: $primary-background-color;
+  background-color: $primary-font-color;
+}
