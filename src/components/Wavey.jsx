@@ -60,7 +60,9 @@ extend({ WaveShaderMaterial });
 const Wave = () => {
   const ref = useRef();
   useFrame(({ clock }) => (ref.current.uTime = clock.getElapsedTime()));
-  const [image] = useLoader(THREE.TextureLoader, ["/images/evening-glow.jpg"]);
+  const [image] = useLoader(THREE.TextureLoader, [
+    "https://images.unsplash.com/photo-1606049543886-a2708d2aa96d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=436&q=80",
+  ]);
 
   return (
     <mesh>
