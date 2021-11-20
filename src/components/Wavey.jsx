@@ -99,27 +99,27 @@ function Wavey() {
         toggleActions: "play play play play",
         scrub: 1,
       },
-      x: 50,
+      x: 0,
       duration: 0.6,
     };
 
-    gsap.to(backText1Ref.current, { ...config, x: 60, y: 10 });
+    gsap.to(backText1Ref.current, { ...config, x: 10, y: 10 });
     gsap.to(frontText1Ref.current, config);
     gsap.to(backText2Ref.current, {
       ...config,
-      x: -40,
+      x: -80,
       y: 10,
     });
     gsap.to(frontText2Ref.current, {
       ...config,
-      x: -50,
+      x: -90,
     });
-    gsap.to(backText3Ref.current, { ...config, x: 60, y: 10 });
+    gsap.to(backText3Ref.current, { ...config, x: 10, y: 10 });
     gsap.to(frontText3Ref.current, config);
   }, []);
 
   return (
-    <div className="wavey-wrapper" ref={startTriggerRef}>
+    <section className="wavey-wrapper" ref={startTriggerRef}>
       <div className="text-wrapper">
         <h2 className="back-name" ref={backText1Ref}>
           JAEYONG CHO
@@ -145,7 +145,7 @@ function Wavey() {
           PASSIONATE TO DEVELOPMENT
         </h2>
       </div>
-    </div>
+    </section>
   );
 }
 

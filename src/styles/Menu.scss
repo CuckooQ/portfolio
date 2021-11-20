@@ -2,8 +2,8 @@
 
 .menu-wrapper {
   $menu-z-index: 10;
-  left: $default-padding;
-  top: $default-padding;
+  left: $default-padding * 0.5;
+  top: $default-padding + 0.5;
 
   position: fixed;
   z-index: $menu-z-index + 1;
