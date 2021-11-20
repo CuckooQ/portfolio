@@ -11,7 +11,7 @@ const initState = {
   isOpen: false,
   menuList: [
     { id: "#home", text: "HOME" },
-    { id: "#aboutMe", text: "ABOUT ME" },
+    { id: "#about", text: "ABOUT ME" },
     { id: "#projects", text: "PROJECTS" },
     { id: "#contact", text: "CONTACT" },
   ],
