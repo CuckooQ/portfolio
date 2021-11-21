@@ -1,28 +1,30 @@
 @import "./variables.scss";
 
 .about-me-wrapper {
-  width: 100%;
   position: relative;
   padding: $default-padding;
   margin-bottom: $default-margin-bottom;
 
   .title {
     font-size: $primary-title-font-size;
+    padding-bottom: $default-padding-bottom;
     margin-top: 0;
-    padding-bottom: 6rem;
 
-    @media (max-width: $screen-size-tablet) {
-      padding-bottom: 0rem;
+    @media (max-width: $screen-size-mobile) {
+      font-size: $secondary-title-font-size;
+      padding-bottom: 0;
     }
   }
+
   .contents {
     display: flex;
+    justify-content: center;
+    padding-bottom: $default-padding-bottom;
     filter: grayscale(1) opacity(0.8);
     transition: 0.8s;
 
     @media (max-width: $screen-size-tablet) {
       flex-direction: column;
-      justify-content: center;
       align-items: center;
     }
 
@@ -31,23 +33,20 @@
     }
 
     .content {
-      font-size: $primary-content-font-size;
       font-weight: bold;
-      white-space: pre-wrap;
       line-height: 3rem;
-      overflow: hidden;
+      white-space: pre-wrap;
       padding-left: 10rem;
       background-image: url("/assets/images/about_bg.png");
       background-size: contain;
       background-repeat: no-repeat;
-      background-position-x: 10rem;
-      background-position-y: -1rem;
+      background-position: center;
+      overflow: hidden;
 
       @media (max-width: $screen-size-tablet) {
         padding-top: 3rem;
         padding-left: 0;
         text-align: center;
-        background-position: center;
       }
     }
 
@@ -58,6 +57,32 @@
       @media (max-width: $screen-size-tablet) {
         width: 80%;
         padding: $default-padding;
+      }
+    }
+  }
+
+  .sub-contents {
+    display: flex;
+    justify-content: space-around;
+
+    @media (max-width: $screen-size-tablet) {
+      flex-direction: column;
+    }
+
+    .content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+
+      > * {
+        margin-bottom: 1rem;
+      }
+
+      > :first-child {
+        display: inline;
+        font-size: $primary-sub-title-font-size;
+        border-bottom: 0.1rem solid;
       }
     }
   }

@@ -1,11 +1,11 @@
 import Wavey from "../Wavey";
-import AboutMe from "../AboutMe";
+import AboutMeContainer from "../../containers/AboutMeContainer";
 
 function Main() {
   return (
     <main>
       <Wavey />
-      <AboutMe />
+      <AboutMeContainer />
     </main>
   );
 }
