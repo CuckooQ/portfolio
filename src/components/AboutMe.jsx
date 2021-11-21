@@ -1,6 +1,9 @@
+import Card from "./Card";
 import "../styles/AboutMe.scss";
 
-function AboutMe() {
+function AboutMe(props) {
+  const { educations, certificates, aboutContent } = props;
+
   return (
     <section className="about-me-wrapper" id="about">
       <h1 className="title">ABOUT ME</h1>
@@ -10,9 +13,27 @@ function AboutMe() {
           src="/images/logo.png"
           alt="Jaeyong Cho"
         />
-        <span className="content">
-          {`꾸준한 성장을 모토로\n새로운 도전을 두려워하지 않고 배움을 멈추지 않습니다.\n\n2018년 풀스택 개발자로 시작해서\n2021년 현재 프론트엔드 개발자로서 나아가고자 합니다.\n\n3년간 일본에서 풀스택 개발자로서의 경험에서 배운\n개발 지식과 책임감, 그리고 협력을 기반으로 삼아 웹 애플리케이션을 개발합니다.`}
-        </span>
+        <span className="content">{aboutContent}</span>
+      </div>
+      <div className="sub-contents">
+        <div className="content">
+          <h2>Education</h2>
+          {educations &&
+            educations.map(({ text, tooltips }, idx) => {
+              return (
+                <Card key={idx} tooltips={tooltips}>
+                  {text}
+                </Card>
+              );
+            })}
+        </div>
+        <div className="content">
+          <h2>Certificate</h2>
+          {certificates &&
+            certificates.map(({ text }, idx) => {
+              return <Card key={idx}>{text}</Card>;
+            })}
+        </div>
       </div>
     </section>
   );

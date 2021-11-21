@@ -1,0 +1,79 @@
+@import "./variables.scss";
+
+.card {
+  position: relative;
+  width: 15rem;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 0 20px 8px #d0d0d0;
+  text-align: center;
+  white-space: pre-wrap;
+  font-weight: bold;
+
+  &.tooltips {
+    cursor: pointer;
+
+    @media (max-width: $screen-size-mobile) {
+      cursor: default;
+    }
+  }
+
+  .tooltip-alert {
+    position: absolute;
+    top: 0.5rem;
+    left: 0.5rem;
+    font-size: 1rem;
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+    background-color: #111111;
+    color: $primary-background-color;
+
+    @media (max-width: $screen-size-mobile) {
+      display: none;
+    }
+  }
+
+  .tooltip {
+    opacity: 0;
+    width: fit-content;
+    height: fit-content;
+    position: absolute;
+    background-color: #fdfdfd;
+    box-shadow: 0 0 10px 4px #d0d0d0;
+    font-size: 0.8rem;
+    padding: 1rem;
+    z-index: 10;
+    cursor: default;
+    transition: 0.6s;
+
+    a {
+      color: #4178be;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    &.show {
+      opacity: 1;
+    }
+    &.left {
+      border-radius: 1rem 1rem 0 1rem;
+      right: 20rem;
+      top: -3rem;
+    }
+    &.right {
+      border-radius: 1rem 1rem 1rem 0;
+      left: 20rem;
+      top: -3rem;
+    }
+    &.bottom {
+      top: 3rem;
+    }
+
+    @media (max-width: $screen-size-mobile) {
+      display: none;
+    }
+  }
+}
