@@ -38,9 +38,13 @@
       transform: translateX($default-point);
     }
 
+    .back-name {
+      color: $secondary-font-color;
+    }
+
     .front-name {
-      color: $primary-background-color;
-      -webkit-text-stroke: 0.02rem $primary-background-color;
+      color: $reverse-font-color;
+      -webkit-text-stroke: 0.02rem $reverse-font-color;
     }
 
     @media (max-width: $screen-size-tablet) {
