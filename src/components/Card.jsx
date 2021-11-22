@@ -11,7 +11,7 @@ function Card(props) {
       onClick={() => setTooltip(!showTooltip)}
     >
       <div className="content">{props.children}</div>
-      {tooltips && <div class="tooltip-alert">i</div>}
+      {tooltips && <div className="tooltip-alert">i</div>}
       {tooltips &&
         tooltips.map(({ text, link }, idx) => {
           let classes = "tooltip ";
