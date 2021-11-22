@@ -1,0 +1,48 @@
+@import "./variables.scss";
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: $reverse-background-color;
+  color: $secondary-font-color;
+  font-size: 1rem;
+  padding: 1rem;
+
+  @media (max-width: $screen-size-tablet) {
+    font-size: 0.8rem;
+  }
+
+  @media (max-width: $screen-size-mobile) {
+    flex-direction: column;
+    justify-content: center;
+    border-top: 1px solid #{$secondary-font-color};
+    line-height: 1.4rem;
+  }
+
+  .line {
+    width: 65%;
+    height: 0.1rem;
+    background-color: $secondary-font-color;
+
+    @media (max-width: $screen-size-tablet) {
+      width: 50%;
+    }
+
+    @media (max-width: $screen-size-mobile) {
+      display: none;
+    }
+  }
+
+  .right {
+    :last-child {
+      padding-left: 1rem;
+      color: $reverse-font-color;
+      font-weight: bold;
+
+      @media (max-width: $screen-size-mobile) {
+        padding-left: 0.5rem;
+      }
+    }
+  }
+}
