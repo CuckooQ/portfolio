@@ -48,6 +48,10 @@
         padding-left: 0;
         text-align: center;
       }
+
+      @media (max-width: $screen-size-mobile) {
+        background: none;
+      }
     }
 
     .content-image {
