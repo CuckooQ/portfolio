@@ -50,7 +50,7 @@ const WaveShaderMaterial = shaderMaterial(
     void main() {
       float wave = vWave * 0.1;
       vec3 texture = texture2D(uTexture, vUv + wave).rgb;
-      gl_FragColor = vec4(texture, 0.8); 
+      gl_FragColor = vec4(texture, 0.95); 
     }
   `
 );
@@ -61,7 +61,7 @@ const Wave = () => {
   const ref = useRef();
   useFrame(({ clock }) => (ref.current.uTime = clock.getElapsedTime()));
   const [image] = useLoader(THREE.TextureLoader, [
-    "https://images.unsplash.com/photo-1606049543886-a2708d2aa96d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=436&q=80",
+    `http://${window.location.host}/images/wavey.jpg`,
   ]);
 
   return (
@@ -74,7 +74,11 @@ const Wave = () => {
 
 const Scene = ({ className }) => {
   return (
-    <Canvas className={className} camera={{ fov: 5, position: [0, 0, 5] }}>
+    <Canvas
+      linear
+      className={className}
+      camera={{ fov: 5, position: [0, 0, 5] }}
+    >
       <Suspense fallback={null}>
         <Wave />
       </Suspense>
