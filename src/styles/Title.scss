@@ -6,7 +6,7 @@
 
   .title-logo {
     width: 4rem;
-    height: 4rem;
+    height: 4.5rem;
   }
 
   .title {
@@ -15,13 +15,14 @@
 
     > * {
       margin: 0;
+      letter-spacing: 0.05rem;
     }
 
     :first-child {
-      font-size: $primary-sub-title-font-size;
+      font-size: 1.5rem;
     }
     :last-child {
-      font-size: $primary-content-font-size;
+      font-size: 1.4rem;
     }
   }
 
