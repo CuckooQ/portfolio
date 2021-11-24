@@ -53,6 +53,9 @@
 
     @media (max-width: $screen-size-mobile) {
       font-size: 1.3rem;
+
+      > * {
+      }
     }
   }
 
