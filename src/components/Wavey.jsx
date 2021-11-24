@@ -61,7 +61,9 @@ const Wave = () => {
   const ref = useRef();
   useFrame(({ clock }) => (ref.current.uTime = clock.getElapsedTime()));
   const [image] = useLoader(THREE.TextureLoader, [
-    `http://${window.location.host}/images/wavey.jpg`,
+    window.location.hostname !== "localhost"
+      ? `https://${window.location.host}/images/wavey.jpg`
+      : `http://${window.location.host}/images/wavey.jpg`,
   ]);
 
   return (
