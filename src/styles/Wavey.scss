@@ -54,7 +54,9 @@
     @media (max-width: $screen-size-mobile) {
       font-size: 1.3rem;
 
-      > * {
+      :nth-child(2),
+      :last-child {
+        white-space: normal;
       }
     }
   }
