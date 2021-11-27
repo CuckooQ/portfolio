@@ -12,7 +12,7 @@ const initState = {
   menuList: [
     { id: "#home", text: "HOME" },
     { id: "#about", text: "ABOUT ME" },
-    { id: "#projects", text: "PROJECTS" },
+    { id: "#work", text: "WORK" },
     { id: "#contact", text: "CONTACT" },
   ],
 };
