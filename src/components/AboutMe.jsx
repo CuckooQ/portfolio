@@ -1,18 +1,17 @@
 import Card from "./Card";
+import Rotate from "./Rotate";
 import "../styles/AboutMe.scss";
 
 function AboutMe(props) {
-  const { educations, certificates, aboutContent } = props;
+  const { educations, certificates, aboutContent, skills } = props;
 
   return (
     <section className="about-me-wrapper" id="about">
       <h1 className="title">ABOUT ME</h1>
       <div className="contents">
-        <img
-          className="content-image"
-          src="/images/logo.png"
-          alt="Jaeyong Cho"
-        />
+        <div className="skills-wrapper">
+          <Rotate className="skills-scene" words={skills} />
+        </div>
         <span className="content">{aboutContent}</span>
       </div>
       <div className="sub-contents">

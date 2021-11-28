@@ -18,6 +18,24 @@ const initState = {
     { text: "의공학 학사 - 연세대학교\n원주캠퍼스" },
   ],
   certificates: [{ text: "2021. 정보처리기사" }],
+  skills: [
+    "HTML5",
+    "CSS3",
+    "SCSS",
+    "Javascript",
+    "ES6",
+    "Typescript",
+    "React",
+    "Redux",
+    "Redux-saga",
+    "Testcafe",
+    "c#",
+    ".NET",
+    "Azure",
+    "SQL",
+    "NO SQL",
+    "Git",
+  ],
 };
 function reducer(prevState = initState, action) {
   switch (action.type) {
