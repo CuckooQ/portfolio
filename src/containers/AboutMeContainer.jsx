@@ -2,7 +2,7 @@ import { useSelector } from "react-redux";
 import AboutMe from "../components/AboutMe";
 
 function AboutMeContainer() {
-  const { aboutContent, educations, certificates } = useSelector(
+  const { aboutContent, educations, certificates, skills } = useSelector(
     (state) => state.about
   );
   return (
@@ -10,6 +10,7 @@ function AboutMeContainer() {
       aboutContent={aboutContent}
       educations={educations}
       certificates={certificates}
+      skills={skills}
     />
   );
 }

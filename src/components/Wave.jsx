@@ -55,7 +55,7 @@ const WaveShaderMaterial = shaderMaterial(
 
 extend({ WaveShaderMaterial });
 
-const Wave = () => {
+const Scene = () => {
   const ref = useRef();
   useFrame(({ clock }) => (ref.current.uTime = clock.getElapsedTime()));
   const [image] = useLoader(THREE.TextureLoader, [
@@ -72,7 +72,7 @@ const Wave = () => {
   );
 };
 
-const Scene = ({ className }) => {
+const Wave = ({ className }) => {
   return (
     <Canvas
       linear
@@ -80,10 +80,10 @@ const Scene = ({ className }) => {
       camera={{ fov: 5, position: [0, 0, 5] }}
     >
       <Suspense fallback={null}>
-        <Wave />
+        <Scene />
       </Suspense>
     </Canvas>
   );
 };
 
-export default Scene;
+export default Wave;

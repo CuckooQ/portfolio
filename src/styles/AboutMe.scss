@@ -32,6 +32,19 @@
       filter: grayscale(0) opacity(1);
     }
 
+    .skills-wrapper {
+      width: 50%;
+      height: 25rem;
+
+      @media (max-width: $screen-size-tablet) {
+        width: 100%;
+      }
+
+      .skills-scene {
+        background-color: transparent;
+      }
+    }
+
     .content {
       font-weight: bold;
       line-height: 3rem;
@@ -54,27 +67,20 @@
         background: none;
       }
     }
-
-    .content-image {
-      width: 40%;
-      height: 25rem;
-
-      @media (max-width: $screen-size-tablet) {
-        width: 80%;
-        padding: $default-padding;
-      }
-    }
   }
 
   .sub-contents {
+    max-width: 100%;
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap;
 
     @media (max-width: $screen-size-tablet) {
       flex-direction: column;
     }
 
     .content {
+      min-width: 50%;
       display: flex;
       flex-direction: column;
       align-items: center;
