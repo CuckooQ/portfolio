@@ -1,5 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap");
-
 @import "./variables.scss";
 
 html {
@@ -30,4 +29,21 @@ a {
 ::selection {
   color: $primary-background-color;
   background-color: $primary-font-color;
+}
+
+/* SCROLL */
+*::-webkit-scrollbar {
+  width: 0.8rem;
+}
+*::-webkit-scrollbar-track {
+  background: #f0f0f0;
+}
+*::-webkit-scrollbar-thumb {
+  background-color: #ffffff;
+  border: 0.1rem solid #e9897e;
+  border-radius: 1rem;
+}
+* {
+  // Firefox
+  // scrollbar-color: #e9897e #f0f0f0;
 }
