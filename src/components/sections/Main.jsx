@@ -1,11 +1,12 @@
-import WaveyContainer from "../../containers/WaveyContainer";
+// import WaveyContainer from "../../containers/WaveyContainer";
 import AboutMeContainer from "../../containers/AboutMeContainer";
 import WorkContainer from "../../containers/WorkContainer";
+import Visual from "../Visual";
 import Contact from "../Contact";
 function Main() {
   return (
     <main>
-      <WaveyContainer />
+      <Visual />
       <AboutMeContainer />
       <WorkContainer />
       <Contact />

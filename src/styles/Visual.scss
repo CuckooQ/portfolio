@@ -1,0 +1,63 @@
+@import "./variables.scss";
+
+.visual-wrapper {
+  height: 90vh;
+  position: relative;
+  padding: $default-padding;
+  margin-bottom: $default-margin-bottom;
+
+  @media (max-width: $screen-size-mobile) {
+    margin-bottom: 10rem;
+  }
+
+  .text-wrapper {
+    width: fit-content;
+    height: fit-content;
+    white-space: pre-wrap;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    font-size: 3rem;
+    font-weight: bold;
+    line-height: 4rem;
+    color: $reverse-font-color;
+
+    .text {
+      display: block;
+    }
+
+    @media (max-width: $screen-size-tablet) {
+      font-size: 2rem;
+      line-height: 3rem;
+    }
+
+    @media (max-width: $screen-size-mobile) {
+      font-size: 1.3rem;
+      line-height: 2.3rem;
+      text-align: center;
+    }
+  }
+
+  .wavey-scene {
+    position: absolute !important;
+    max-width: 90%;
+    height: inherit !important;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    background-color: transparent;
+
+    @media (max-width: $screen-size-mobile) {
+      max-width: 70vh;
+      max-height: 50vh;
+    }
+  }
+
+  @media (max-width: $screen-size-mobile) {
+    max-width: 70vh;
+    max-height: 50vh;
+  }
+}

@@ -18,10 +18,14 @@
     }
   }
 
-  .contents {
+  > .contents {
     display: flex;
     justify-content: center;
     align-items: center;
     margin-bottom: 5rem;
+
+    @media (max-width: $screen-size-mobile) {
+      padding: 4rem;
+    }
   }
 }

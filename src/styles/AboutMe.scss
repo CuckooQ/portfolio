@@ -31,6 +31,7 @@
     @media (max-width: $screen-size-tablet) {
       flex-direction: column;
       align-items: center;
+      padding-bottom: 4rem;
     }
 
     &:hover {
@@ -38,10 +39,12 @@
     }
 
     .skills-wrapper {
+      padding-left: 5rem;
       width: 50%;
       height: 25rem;
 
       @media (max-width: $screen-size-tablet) {
+        padding-left: 0;
         width: 100%;
       }
 
@@ -55,7 +58,7 @@
       line-height: 3rem;
       white-space: pre-wrap;
       word-break: keep-all;
-      padding-left: 10rem;
+      text-align: center;
       background-image: url("/assets/images/about_bg.png");
       background-size: contain;
       background-repeat: no-repeat;
@@ -63,9 +66,7 @@
       overflow: hidden;
 
       @media (max-width: $screen-size-tablet) {
-        padding-top: 3rem;
-        padding-left: 0;
-        text-align: center;
+        padding: 4rem 0 4rem 0;
       }
 
       @media (max-width: $screen-size-mobile) {
@@ -82,6 +83,7 @@
 
     @media (max-width: $screen-size-tablet) {
       flex-direction: column;
+      flex-wrap: nowrap;
     }
 
     .content {
