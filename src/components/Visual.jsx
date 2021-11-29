@@ -1,17 +1,16 @@
 import React from "react";
 import Wave from "./Wave";
-// import { OS, getOS } from "../utils/os";
+import { OS, getOS } from "../utils/os";
 import "../styles/Visual.scss";
 
 function Visual(props) {
   return (
     <section className="visual-wrapper" id="home">
-      {/*getOS() === OS.MAC ? (
+      {getOS() === OS.MAC ? (
         <img className="wavey-scene" src="/images/wavey.jpg" alt="Wave"></img>
       ) : (
         <Wave className="wavey-scene" />
-      )*/}
-      <Wave className="wavey-scene" />
+      )}
       <div className="text-wrapper">
         <span className="text">HI,</span>
         <span className="text">I'M JAEYONG CHO,</span>
