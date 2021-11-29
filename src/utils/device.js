@@ -6,6 +6,7 @@ export const DEVICE = {
 
 export function getDevice() {
   const userAgent = navigator.userAgent;
+  window.alert(userAgent);
   if (/(tablet|ipad|playbook|silk)|(android(?!.*mobi))/i.test(userAgent)) {
     return DEVICE.TABLET;
   }
