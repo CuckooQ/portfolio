@@ -1,7 +1,7 @@
 import React, { useRef, useEffect } from "react";
 import gsap from "gsap";
 import Wave from "./Wave";
-import { DEVICE, getDevice } from "../utils/device";
+import { OS, getOS } from "../utils/os";
 import "../styles/Wavey.scss";
 
 function Wavey(props) {
@@ -14,8 +14,6 @@ function Wavey(props) {
   const frontText3Ref = useRef();
 
   useEffect(() => {
-    const test = getDevice();
-    window.alert(test);
     const onResize = () => {
       if (window.innerWidth > 1024) {
         updateFigure(0.5);
@@ -82,7 +80,7 @@ function Wavey(props) {
         </h2>
       </div>
 
-      {getDevice() === DEVICE.TABLET ? (
+      {getOS() === OS.MAC ? (
         <img className="wavey-scene" src="/images/wavey.jpg" alt="Wave"></img>
       ) : (
         <Wave className="wavey-scene" />
