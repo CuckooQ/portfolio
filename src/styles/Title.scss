@@ -4,16 +4,9 @@
   display: flex;
   justify-content: center;
 
-  &:hover {
-    .title-logo {
-      transform: scale(0.9);
-    }
-  }
-
   .title-logo {
     width: 4rem;
     height: 4.5rem;
-    transition: 1s ease-in-out;
   }
 
   .title {
