@@ -77,7 +77,7 @@ const Wave = ({ className }) => {
     <Canvas
       linear
       className={className}
-      camera={{ fov: 7, position: [3, 3, 5] }}
+      camera={{ fov: 7, position: [2, 3, 4] }}
     >
       <Suspense fallback={null}>
         <Scene />
