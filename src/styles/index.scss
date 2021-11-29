@@ -1,5 +1,19 @@
 @import "./variables.scss";
 
+@font-face {
+  font-family: "Source Sans Pro";
+  src: url("/assets/fonts/SourceSansPro-Bold.ttf");
+  src: url("/assets/fonts/SourceSansPro-Regular.ttf");
+  unicode-range: U+26;
+}
+
+@font-face {
+  font-family: "Noto Sans KR";
+  src: url("/assets/fonts/NotoSansKR-Bold.otf");
+  src: url("/assets/fonts/NotoSansKR-Medium.otf");
+  unicode-range: U+AC00-D7A3, U+0030-0039;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -9,7 +23,7 @@ body {
   margin: 0;
   color: $primary-font-color;
   background-color: $primary-background-color;
-  font-family: "Source Sans Pro", "Noto Sans KR", sans-serif;
+  font-family: "Noto Sans KR", "Source Sans Pro", sans-serif;
   font-size: $primary-content-font-size;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -41,16 +55,4 @@ a {
   background-color: #ffffff;
   border: 0.1rem solid #e9897e;
   border-radius: 1rem;
-}
-
-@font-face {
-  font-family: "Noto Sans KR";
-  src: url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap");
-  unicode-range: U+AC00-D7A3;
-}
-
-@font-face {
-  font-family: "Source Sans Pro";
-  src: url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700&display=swap");
-  unicode-range: U+26;
 }
