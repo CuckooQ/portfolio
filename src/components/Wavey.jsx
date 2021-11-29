@@ -14,6 +14,8 @@ function Wavey(props) {
   const frontText3Ref = useRef();
 
   useEffect(() => {
+    const test = getDevice();
+    window.alert(test);
     const onResize = () => {
       if (window.innerWidth > 1024) {
         updateFigure(0.5);
