@@ -11,18 +11,29 @@
   }
 
   .text-wrapper {
-    width: 100%;
-    height: 100%;
+    width: calc(100% - 2 * 4rem);
+    height: inherit;
     position: absolute;
-    overflow: hidden;
-    white-space: nowrap;
-    font-size: $primary-title-font-size;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    // overflow: hidden;
+    white-space: normal;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 
+    @media (max-width: $screen-size-mobile) {
+      max-height: 50vh;
+    }
+
     > * {
+      font-size: $primary-title-font-size;
       margin: 0;
+
+      @media (max-width: $screen-size-mobile) {
+        font-size: $secondary-title-font-size;
+      }
     }
 
     $default-point: 100rem;
@@ -40,34 +51,28 @@
 
     .back-name {
       color: $secondary-font-color;
+      opacity: 0.9;
     }
 
     .front-name {
       color: $reverse-font-color;
       -webkit-text-stroke: 0.02rem $reverse-font-color;
     }
-
-    @media (max-width: $screen-size-tablet) {
-      font-size: 2rem;
-    }
-
-    @media (max-width: $screen-size-mobile) {
-      font-size: 1.3rem;
-
-      :nth-child(2),
-      :last-child {
-        white-space: normal;
-      }
-    }
   }
 
   .wavey-scene {
     position: absolute !important;
-    max-width: 50%;
+    max-width: 70%;
+    height: inherit !important;
     left: 0;
     right: 0;
     margin: 0 auto;
     background-color: transparent;
+
+    @media (max-width: $screen-size-mobile) {
+      max-width: 70vh;
+      max-height: 50vh;
+    }
   }
 
   @media (max-width: $screen-size-mobile) {

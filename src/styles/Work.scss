@@ -5,10 +5,15 @@
   padding: $default-padding;
   margin-bottom: $default-margin-bottom;
 
+  @media (max-width: 600px) {
+    margin-bottom: 10rem;
+  }
+
   .title {
     font-size: $primary-title-font-size;
     padding-bottom: $default-padding-bottom;
     margin-top: 0;
+    margin-bottom: 0;
 
     @media (max-width: $screen-size-mobile) {
       font-size: $secondary-title-font-size;
