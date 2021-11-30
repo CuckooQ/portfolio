@@ -29,13 +29,16 @@ function WorkCard(props) {
         <img src={image} alt={work.cover.alt} />
         {work.cover.url && (
           <Button
-            className="view-btn"
+            className="cover-btn"
             click={() => {
               window.open(`${work.cover.url}`, "_blank");
             }}
           >
             VIEW SITE
           </Button>
+        )}
+        {work.cover.text && (
+          <span className="cover-text">{work.cover.text}</span>
         )}
       </div>
       <ul className="contents">

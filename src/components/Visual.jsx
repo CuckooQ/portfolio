@@ -17,7 +17,7 @@ function Visual(props) {
         <span className="text">FRONT-END DEVELOPER.</span>
         <span className="text">I'M PASSIONATE TO DEVELOPMENT.</span>
         <span className="text">I'M NOT AFRAID OF CHALLENGES.</span>
-        <span className="text">I LIKE A CAT, ORANGE, AND MUSIC.</span>
+        <span className="text">I LIKE A CAT, GRAPEFRUIT, AND MUSIC.</span>
         <span className="text">LET'S GO PLUS ULTRA!</span>
       </div>
     </section>

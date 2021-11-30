@@ -21,10 +21,10 @@ const works = [
         items: [
           "개발 팀 8명으로 구성.",
           "애자일 개발 방식으로 진행.",
-          "Azure Devops & Cloud Service를 이용해서 태스크와 코드 리뷰, 문서 관리, 배포 등을 진행.",
+          "Azure Devops와 Cloud Service를 이용해서 태스크와 코드 리뷰, 문서 관리, 배포 등을 진행.",
           "Microsoft Teams로 업무 커뮤니케이션 진행.",
           "코로나19 사태 이후 재택 근무 형태로 진행.",
-          "Visual Studio & Visual Studio Code를 개발 툴로 사용.",
+          "Visual Studio와 Visual Studio Code를 개발 툴로 사용.",
         ],
       },
       {
@@ -47,7 +47,7 @@ const works = [
         title: "Roles in Chat Bot Application",
         items: [
           "자동 완성 검색어 제공 기능 구현.\n(Azure Bot Framework 프론트 엔드 제공 파일의 튜닝)",
-          "커스텀 시나리오와 기타 시나리오 처리 구현 & 개선.",
+          "커스텀 시나리오와 기타 시나리오 처리 구현과 개선.",
           "MS TEAMS, NAVER LINE 커뮤니케이션 툴에서의 동작 개선.",
           "NAVER LINEWORKS  커뮤니케이션 툴에서의 동작 구현.",
           "챗봇에서 제공하는 파일의 NOT FOUND 기능 구현.",
@@ -57,11 +57,11 @@ const works = [
       {
         title: "Roles in Chat Bot Admin Application",
         items: [
-          "과거 채팅 이력 관리 기능 구현 & 개선.",
-          "시나리오 관리 기능 구현 & 개선.",
-          "챗봇 레이아웃 관리 기능 구현 & 개선.",
-          "실시간 채팅 목록 화면 구현 & 개선.",
-          "관리자와의 채팅 화면 구현 & 개선.",
+          "과거 채팅 이력 관리 기능 구현과 개선.",
+          "시나리오 관리 기능 구현과 개선.",
+          "챗봇 레이아웃 관리 기능 구현과 개선.",
+          "실시간 채팅 목록 화면 구현과 개선.",
+          "관리자와의 채팅 화면 구현과 개선.",
           "계약 플랜에 따른 제공 기능의 활성화/비활성화 구현.",
           "어드민 유저 관리 기능의 프론트엔드 영역 구현.",
           "어드민 조작 로그 출력 기능의 프론트엔드 영역 구현.",
@@ -85,7 +85,8 @@ const works = [
     cover: {
       image: "/images/job-search.png",
       subImage: "/images/job-search.png",
-      alt: "Ricoh Chatbot Service",
+      alt: "I'm looking for a company to work with me",
+      text: "I'm looking for a company to work with me",
     },
     contents: [],
   },

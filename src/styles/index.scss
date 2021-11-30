@@ -1,17 +1,17 @@
 @import "./variables.scss";
 
 @font-face {
-  font-family: "Source Sans Pro";
-  src: url("/assets/fonts/SourceSansPro-Bold.ttf");
-  src: url("/assets/fonts/SourceSansPro-Regular.ttf");
-  unicode-range: U+26;
+  font-family: "Open Sans";
+  src: url("/assets/fonts/OpenSans-Bold.ttf");
+  src: url("/assets/fonts/OpenSans-Medium.ttf");
+  unicode-range: U+26, U+0030-0039;
 }
 
 @font-face {
   font-family: "Noto Sans KR";
   src: url("/assets/fonts/NotoSansKR-Bold.otf");
   src: url("/assets/fonts/NotoSansKR-Medium.otf");
-  unicode-range: U+AC00-D7A3, U+0030-0039;
+  unicode-range: U+AC00-D7A3;
 }
 
 html {
@@ -23,7 +23,7 @@ body {
   margin: 0;
   color: $primary-font-color;
   background-color: $primary-background-color;
-  font-family: "Noto Sans KR", "Source Sans Pro", sans-serif;
+  font-family: "Open Sans", "Noto Sans KR", sans-serif;
   font-size: $primary-content-font-size;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
