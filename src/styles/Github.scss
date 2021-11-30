@@ -1,0 +1,14 @@
+@import "./variables.scss";
+
+.github-wrapper {
+  $btn-size: 4rem;
+
+  position: absolute;
+  top: $default-padding * 0.5;
+  right: 0;
+  transform: translateX($btn-size * 0.5);
+
+  @media (max-width: $screen-size-mobile) {
+    display: none;
+  }
+}

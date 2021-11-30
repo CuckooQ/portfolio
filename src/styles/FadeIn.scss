@@ -1,0 +1,43 @@
+@import "./variables.scss";
+
+.fade-in-wrapper {
+  $time: 2s;
+
+  position: relative;
+
+  .fade-in {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    opacity: 1;
+    transition: transform $time ease-in-out, opacity $time * 10;
+    background: $primary-background-color;
+    z-index: $fade-in-z-index;
+
+    &.show {
+      &.right {
+        transform: translateX(100rem);
+      }
+
+      &.left {
+        transform: translateX(-100rem);
+      }
+      opacity: 0;
+    }
+
+    &.delay-1 {
+      transition-delay: 1s;
+    }
+    &.delay-2 {
+      transition-delay: 2s;
+    }
+    &.delay-3 {
+      transition-delay: 3s;
+    }
+    &.delay-4 {
+      transition-delay: 4s;
+    }
+  }
+}

@@ -1,14 +1,14 @@
 import "../../styles/Header.scss";
 import MenuContainer from "../../containers/MenuContainer";
 import Title from "../Title";
-import GithubBtn from "../GithubBtn";
+import Github from "../Github";
 
 function Header() {
   return (
-    <header>
+    <header id="home">
       <MenuContainer />
       <Title />
-      <GithubBtn />
+      <Github />
     </header>
   );
 }

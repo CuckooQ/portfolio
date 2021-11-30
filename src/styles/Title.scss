@@ -21,7 +21,7 @@
     :first-child {
       font-size: 1.5rem;
     }
-    :last-child {
+    :nth-child(2) {
       font-size: 1.4rem;
     }
   }
