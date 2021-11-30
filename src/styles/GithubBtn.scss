@@ -3,19 +3,11 @@
 .github-btn {
   $btn-size: 4rem;
 
-  position: absolute;
-  top: $default-padding * 0.5;
-  right: 0;
   width: $btn-size;
   height: $btn-size;
-  transform: translateX($btn-size * 0.5);
 
   :hover {
     transition: 0.3s ease-in-out;
     transform: translateX($btn-size * -1 * 0.4) rotate(-40deg);
-  }
-
-  @media (max-width: $screen-size-mobile) {
-    display: none;
   }
 }

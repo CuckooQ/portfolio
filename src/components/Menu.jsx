@@ -1,5 +1,5 @@
-import "../styles/Menu.scss";
 import ModalPortals from "./ModalPortals";
+import "../styles/Menu.scss";
 
 function Menu(props) {
   const { menuList, isOpen, toggleMenu } = props;

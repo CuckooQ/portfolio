@@ -5,7 +5,7 @@ import "../styles/Visual.scss";
 
 function Visual(props) {
   return (
-    <section className="visual-wrapper" id="home">
+    <section className="visual-wrapper">
       {getOS() === OS.MAC ? (
         <img className="wavey-scene" src="/images/wavey.jpg" alt="Wave"></img>
       ) : (
