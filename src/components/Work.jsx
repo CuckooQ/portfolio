@@ -3,6 +3,10 @@ import "../styles/Work.scss";
 
 function Work(props) {
   const { works, page, setPage } = props;
+  const PAGING = {
+    PREV: "prev",
+    NEXT: "next",
+  };
 
   return (
     <section className="work-wrapper" id="work">
@@ -21,20 +25,20 @@ function Work(props) {
           className="controls-wrapper"
           onClick={(e) => {
             const action = e.target.dataset.action;
-            action === "<" && setPage(page - 1);
-            action === ">" && setPage(page + 1);
+            action === PAGING.PREV && setPage(page - 1);
+            action === PAGING.NEXT && setPage(page + 1);
           }}
         >
           <div className="controls">
             {page !== 1 && (
-              <div className="prev" data-action="<">
-                {"<"}
+              <div className="prev" data-action={PAGING.PREV}>
+                ❮
               </div>
             )}
 
             {page !== works.length && (
-              <div className="next" data-action=">">
-                {">"}
+              <div className="next" data-action={PAGING.NEXT}>
+                ❯
               </div>
             )}
           </div>
