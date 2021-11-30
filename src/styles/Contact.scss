@@ -9,6 +9,7 @@
     font-size: $primary-title-font-size;
     padding-bottom: $default-padding-bottom;
     margin-top: 0;
+    margin-bottom: 0;
     color: $reverse-font-color;
 
     @media (max-width: $screen-size-mobile) {
@@ -17,10 +18,14 @@
     }
   }
 
-  .contents {
+  > .contents {
     display: flex;
     justify-content: center;
     align-items: center;
     margin-bottom: 5rem;
+
+    @media (max-width: $screen-size-mobile) {
+      padding: 4rem;
+    }
   }
 }

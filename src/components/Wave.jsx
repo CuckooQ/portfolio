@@ -66,7 +66,7 @@ const Scene = () => {
 
   return (
     <mesh>
-      <planeBufferGeometry args={[0.4, 0.6, 16, 16]} />
+      <planeBufferGeometry args={[1, 0.6, 16, 16]} />
       <waveShaderMaterial ref={ref} uTime={0} uTexture={image} />
     </mesh>
   );
@@ -77,7 +77,7 @@ const Wave = ({ className }) => {
     <Canvas
       linear
       className={className}
-      camera={{ fov: 5, position: [0, 0, 5] }}
+      camera={{ fov: 7, position: [2, 3, 4] }}
     >
       <Suspense fallback={null}>
         <Scene />

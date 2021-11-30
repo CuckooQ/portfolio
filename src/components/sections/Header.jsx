@@ -5,7 +5,7 @@ import GithubBtn from "../GithubBtn";
 
 function Header() {
   return (
-    <header id="home">
+    <header>
       <MenuContainer />
       <Title />
       <GithubBtn />

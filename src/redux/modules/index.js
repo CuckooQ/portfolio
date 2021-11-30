@@ -1,9 +1,8 @@
 import { combineReducers } from "redux";
 import menu from "./menu";
 import about from "./about";
-import wavey from "./wavey";
 import work from "./work";
 
-const reducer = combineReducers({ menu, about, wavey, work });
+const reducer = combineReducers({ menu, about, work });
 
 export default reducer;

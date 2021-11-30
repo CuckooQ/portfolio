@@ -9,10 +9,10 @@ function AboutMe(props) {
     <section className="about-me-wrapper" id="about">
       <h1 className="title">ABOUT ME</h1>
       <div className="contents">
+        <span className="content">{aboutContent}</span>
         <div className="skills-wrapper">
           <Rotate className="skills-scene" words={skills} />
         </div>
-        <span className="content">{aboutContent}</span>
       </div>
       <div className="sub-contents">
         <div className="content">

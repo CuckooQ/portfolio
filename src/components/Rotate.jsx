@@ -36,7 +36,7 @@ function Scene({ words }) {
   return (
     <group>
       {words.map((word, idx) => {
-        return <Word position={positions[idx]} text={word} />;
+        return <Word position={positions[idx]} text={word} key={idx} />;
       })}
     </group>
   );
