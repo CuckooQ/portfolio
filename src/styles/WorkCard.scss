@@ -169,6 +169,6 @@
   }
 
   &.disabled {
-    z-index: -1 !important;
+    z-index: $disabled-z-index !important;
   }
 }
