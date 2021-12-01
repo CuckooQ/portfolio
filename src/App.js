@@ -10,10 +10,8 @@ import { OS, getOS } from "./utils/environments/os";
 function App() {
   let [isSupport, setSupport] = useState(true);
   useEffect(() => {
-    getBrowser() === BROWSER.UNDEFINED &&
-      getOS() === OS.UNDEFINED &&
+    (getBrowser() === BROWSER.UNDEFINED || getOS() === OS.UNDEFINED) &&
       setSupport(false);
-    window.alert(getBrowser() + getOS());
   }, []);
 
   return (
