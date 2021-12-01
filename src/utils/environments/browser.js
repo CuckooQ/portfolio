@@ -7,16 +7,17 @@ export const BROWSER = {
 
 export function getBrowser() {
   const userAgent = navigator.userAgent;
-  if (userAgent.indexOf("chrome") !== -1) {
+  const vendor = navigator.vendor;
+  if (userAgent.indexOf("Edg") !== -1) {
+    return BROWSER.EDGE;
+  }
+  if (userAgent.indexOf("Chrome") !== -1 && vendor === "Google Inc.") {
     return BROWSER.CHROME;
   }
   if (userAgent.indexOf("Firefox") !== -1) {
     return BROWSER.FIREFOX;
   }
-  if (userAgent.indexOf("safari") !== -1) {
+  if (userAgent.indexOf("Safari") !== -1 && vendor === "Apple Computer, Inc.") {
     return BROWSER.Safari;
-  }
-  if (userAgent.indexOf("Edge") !== -1) {
-    return BROWSER.EDGE;
   }
 }
