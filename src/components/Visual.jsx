@@ -2,7 +2,6 @@ import React from "react";
 import Wave from "./Wave";
 import Planet from "./Planet";
 import { OS, getOS } from "../utils/environments/os";
-import { BROWSER, getBrowser } from "../utils/environments/browser";
 import "../styles/Visual.scss";
 
 function Visual() {
