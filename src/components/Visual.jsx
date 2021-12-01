@@ -1,13 +1,14 @@
 import React from "react";
 import Wave from "./Wave";
 import Planet from "./Planet";
-import { OS, getOS } from "../utils/os";
+import { OS, getOS } from "../utils/environments/os";
+import { BROWSER, getBrowser } from "../utils/environments/browser";
 import "../styles/Visual.scss";
 
 function Visual() {
   return (
     <section className="visual-wrapper">
-      {getOS() === OS.MAC ? (
+      {getOS() === OS.MAC && getBrowser() === BROWSER.Safari ? (
         <Planet className="visual" />
       ) : (
         <Wave className="visual" />
