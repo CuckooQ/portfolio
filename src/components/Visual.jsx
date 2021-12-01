@@ -1,15 +1,16 @@
 import React from "react";
 import Wave from "./Wave";
+import Planet from "./Planet";
 import { OS, getOS } from "../utils/os";
 import "../styles/Visual.scss";
 
-function Visual(props) {
+function Visual() {
   return (
     <section className="visual-wrapper">
       {getOS() === OS.MAC ? (
-        <img className="wavey-scene" src="/images/wavey.jpg" alt="Wave"></img>
+        <Planet className="visual" />
       ) : (
-        <Wave className="wavey-scene" />
+        <Wave className="visual" />
       )}
       <div className="text-wrapper">
         <span className="text">HI,</span>
