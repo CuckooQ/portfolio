@@ -3,6 +3,7 @@ export const BROWSER = {
   FIREFOX: "Firefox",
   EDGE: "Edge",
   Safari: "Safari",
+  UNDEFINED: "undefined",
 };
 
 export function getBrowser() {
@@ -20,4 +21,5 @@ export function getBrowser() {
   if (userAgent.indexOf("Safari") !== -1 && vendor === "Apple Computer, Inc.") {
     return BROWSER.Safari;
   }
+  return BROWSER.UNDEFINED;
 }
