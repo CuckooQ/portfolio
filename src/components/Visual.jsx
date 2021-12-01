@@ -6,7 +6,7 @@ import { BROWSER, getBrowser } from "../utils/environments/browser";
 import "../styles/Visual.scss";
 
 function Visual() {
-  window.alert(getBrowser());
+  window.alert(navigator.userAgent, navigator.vendor);
   return (
     <section className="visual-wrapper">
       {getOS() === OS.MAC && getBrowser() === BROWSER.Safari ? (
