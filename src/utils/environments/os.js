@@ -4,6 +4,7 @@ export const OS = {
   IOS: "IOS",
   MAC: "MAC",
   LINUX: "Linux",
+  UNDEFINED: "undefined",
 };
 
 export function getOS() {
@@ -27,4 +28,5 @@ export function getOS() {
   if (userAgent.match(/Linux/)) {
     return OS.LINUX;
   }
+  return OS.UNDEFINED;
 }
