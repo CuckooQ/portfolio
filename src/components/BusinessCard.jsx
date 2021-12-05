@@ -1,5 +1,6 @@
 import { useRef, useState } from "react";
 import QRCode from "./QRCode";
+import URL from "../constants/URL";
 import "../styles/BusinessCard.scss";
 
 function BusinessCard() {
@@ -19,7 +20,7 @@ function BusinessCard() {
         }, 1000);
       })
       .catch((_err) => {
-        alert("copy failed.");
+        alert("email copy failed.");
       });
   }
 
@@ -31,16 +32,15 @@ function BusinessCard() {
       <div className="front">
         <div className="layer">
           <h1>CUCKOOQ</h1>
-          <div className="corner"></div>
-          <div className="corner"></div>
-          <div className="corner"></div>
-          <div className="corner"></div>
+          {Array(4)
+            .fill()
+            .map((_, idx) => (
+              <div className="corner" key={idx}></div>
+            ))}
         </div>
       </div>
       <div className="back">
-        <div className="title">
-          <h2>Jaeyong Cho</h2>
-        </div>
+        <h2 className="title">Jaeyong Cho</h2>
         <div className="contents">
           <div className="content">
             <div className="sub-title">Email</div>
@@ -59,7 +59,7 @@ function BusinessCard() {
             <div className="sub-title">Github</div>
             <span className="sub-content">
               <a
-                href="https://github.com/CuckooQ"
+                href={URL.GITHUB}
                 target="_blank"
                 rel="noreferrer"
                 onClick={(e) => e.stopPropagation()}

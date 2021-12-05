@@ -1,24 +1,20 @@
 @import "./variables.scss";
 
 .btn {
-  $color: #e9897e;
-  $backgorund-color: #ffffff;
-  $backgorund-color-hover: #f6d0cb;
-
   padding: 0.75rem 1rem;
-  color: $color;
-  background-color: $backgorund-color;
-  border: 0.1rem solid $color;
+  border: 0.1rem solid $main-color;
   border-radius: 0.2rem;
+  color: $main-color;
+  background-color: $color-white;
   font-size: 0.7rem;
   font-weight: bold;
   cursor: pointer;
-  z-index: $primary-z-index;
+  z-index: $z-index-tertiary;
   transition: 0.4s;
 
   &:hover {
-    background-color: $backgorund-color-hover;
-    color: $color;
     opacity: 1;
+    background-color: $main-color-light;
+    color: $main-color;
   }
 }

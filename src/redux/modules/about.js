@@ -1,3 +1,5 @@
+import URL from "../../constants/URL";
+
 // REDUCER
 const initState = {
   aboutContent: `꾸준한 성장을 모토로\n새로운 도전을 두려워하지 않고 배움을 멈추지 않습니다.\n\n2018년 풀스택 개발자로 시작해서\n2021년 현재 프론트엔드 개발자로서 나아가고자 합니다.\n\n3년간 일본에서 풀스택 개발자로서의 경험에서 배운\n개발 지식과 책임감, 그리고 협력을 기반으로 삼아 웹 애플리케이션을 개발합니다.`,
@@ -10,7 +12,7 @@ const initState = {
         },
         { text: "JAVA, SQL, 일본어 학습" },
         {
-          link: "https://www.youtube.com/embed/d6qAujuIA2Q",
+          link: `${URL.SC_IT_MASTER_TEAM_PROJECT}`,
           text: "팀 프로젝트",
         },
       ],

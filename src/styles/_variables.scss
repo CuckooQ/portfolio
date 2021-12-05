@@ -1,24 +1,25 @@
-$primary-font-color: #141414;
-$reverse-font-color: #f0f0f0;
-$secondary-font-color: #302f34;
+$viewport-size-tablet: 1024px;
+$viewport-size-mobile: 600px;
 
-$primary-background-color: #f0f0f0;
-$reverse-background-color: #141414;
+$color-white: #fdfdfd;
+$main-color: #e9897e;
+$main-color-light: #f6d0cb;
+$default-color: #141414;
+$default-color-reverse: #f0f0f0;
+$secondary-color: #302f34;
+$secondary-color-light: #908f92;
+$modal-background-color: rgba(0, 0, 0, 0.5);
+$link-color: #4178be;
 
-$primary-title-font-size: 3.5rem;
-$secondary-title-font-size: 2rem;
-$primary-sub-title-font-size: 1.3rem;
-$primary-content-font-size: 1.1rem;
+$title-font-size-large: 3.5rem;
+$title-font-size-medium: 2rem;
+$title-font-size-small: 1.3rem;
 
-$default-padding: 4rem;
-$default-padding-top: 2rem;
-$default-padding-bottom: 6rem;
-$default-margin-bottom: 20rem;
+$content-font-size: 1.1rem;
 
-$screen-size-tablet: 1024px;
-$screen-size-mobile: 600px;
+$z-index-primary: 30;
+$z-index-secondary: 20;
+$z-index-tertiary: 10;
+$z-index-disabled: -1;
 
-$disabled-z-index: -1;
-$primary-z-index: 10;
-$fade-in-z-index: 20;
-$menu-z-index: 30;
+$delay-fade-in: 2s;

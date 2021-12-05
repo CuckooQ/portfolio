@@ -1,5 +1,6 @@
 @import "./variables.scss";
 
+// Font to Korean & Number
 @font-face {
   font-family: "Open Sans";
   src: url("/assets/fonts/OpenSans-Bold.ttf");
@@ -7,6 +8,7 @@
   unicode-range: U+26, U+0030-0039;
 }
 
+// Font to English
 @font-face {
   font-family: "Noto Sans KR";
   src: url("/assets/fonts/NotoSansKR-Bold.otf");
@@ -15,16 +17,17 @@
 }
 
 html {
+  // smoothing scroll
   scroll-behavior: smooth;
 }
 
 body {
   box-sizing: border-box;
   margin: 0;
-  color: $primary-font-color;
-  background-color: $primary-background-color;
+  color: $default-color;
+  background-color: $default-color-reverse;
   font-family: "Open Sans", "Noto Sans KR", sans-serif;
-  font-size: $primary-content-font-size;
+  font-size: $content-font-size;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -36,12 +39,12 @@ body {
 
 a {
   text-decoration: none;
-  color: $primary-font-color;
+  color: $default-color;
 }
 
 ::selection {
-  color: $primary-background-color;
-  background-color: $primary-font-color;
+  color: $default-color-reverse;
+  background-color: $default-color;
 }
 
 /* SCROLL */
@@ -49,10 +52,10 @@ a {
   width: 0.8rem;
 }
 *::-webkit-scrollbar-track {
-  background: #f0f0f0;
+  background: $default-color-reverse;
 }
 *::-webkit-scrollbar-thumb {
-  background-color: #ffffff;
-  border: 0.1rem solid #e9897e;
+  background-color: $color-white;
+  border: 0.1rem solid #{$main-color};
   border-radius: 1rem;
 }

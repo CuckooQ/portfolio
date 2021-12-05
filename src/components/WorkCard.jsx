@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { throttle } from "lodash";
 import Button from "./Button";
-import SIZE from "../constants/size";
+import { VIEWPORT_SIZE, getViewportSize } from "../utils/viewportSize";
 import "../styles/WorkCard.scss";
 
 function WorkCard(props) {
@@ -11,9 +11,10 @@ function WorkCard(props) {
 
   useEffect(() => {
     const onResize = () => {
-      window.innerWidth > SIZE.TABLET_SIZE && setImage(work.cover.image);
-      window.innerWidth <= SIZE.TABLET_SIZE && setImage(work.cover.image);
-      window.innerWidth <= SIZE.MOBILE_SIZE && setImage(work.cover.subImage);
+      getViewportSize() > VIEWPORT_SIZE.TABLET && setImage(work.cover.image);
+      getViewportSize() <= VIEWPORT_SIZE.TABLET && setImage(work.cover.image);
+      getViewportSize() <= VIEWPORT_SIZE.MOBILE &&
+        setImage(work.cover.subImage);
     };
     window.addEventListener("resize", throttle(onResize, 200));
     onResize();

@@ -1,26 +1,6 @@
 @import "./variables.scss";
 
 .work-wrapper {
-  position: relative;
-  padding: $default-padding;
-  margin-bottom: $default-margin-bottom;
-
-  @media (max-width: 600px) {
-    margin-bottom: 10rem;
-  }
-
-  .title {
-    font-size: $primary-title-font-size;
-    padding-bottom: $default-padding-bottom;
-    margin-top: 0;
-    margin-bottom: 0;
-
-    @media (max-width: $screen-size-mobile) {
-      font-size: $secondary-title-font-size;
-      padding-bottom: 0;
-    }
-  }
-
   > .contents {
     position: relative;
     display: flex;
@@ -28,7 +8,7 @@
     width: inherit;
     height: 60vh;
 
-    @media (max-width: $screen-size-tablet) {
+    @media (max-width: $viewport-size-tablet) {
       padding: 4rem 0 4rem 0;
     }
 
@@ -40,23 +20,23 @@
         left: 60vw;
         opacity: 0;
         transition: 1s;
-        z-index: $disabled-z-index;
+        z-index: $z-index-disabled;
       }
 
       .selected {
         position: absolute;
         opacity: 1;
         left: 0;
-        z-index: $primary-z-index;
+        z-index: $z-index-tertiary;
       }
     }
     .controls-wrapper {
       position: absolute;
-      width: 100%;
-      height: calc(100% - 4rem);
       left: 0;
       right: 0;
       margin: 0 auto;
+      width: 100%;
+      height: calc(100% - 4rem);
 
       .controls {
         position: relative;
@@ -64,28 +44,28 @@
 
         .prev,
         .next {
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          margin: auto;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border-radius: 50%;
+          border: 0.1rem solid;
           width: 3rem;
           height: 3rem;
           font-size: 1.5rem;
           font-weight: bold;
           text-align: center;
-          z-index: $primary-z-index;
-          display: flex;
-          justify-content: center;
-          align-items: center;
+          z-index: $z-index-tertiary;
           cursor: pointer;
-          color: #e9897e;
-          background-color: #ffffff;
-          border-radius: 50%;
-          border: 0.1rem solid;
-          position: absolute;
-          top: 0;
-          bottom: 0;
-          margin: auto;
+          color: $main-color;
+          background-color: $color-white;
           transition: 0.4s;
 
           &:hover {
-            background-color: #f6d0cb;
+            background-color: $main-color-light;
           }
         }
 

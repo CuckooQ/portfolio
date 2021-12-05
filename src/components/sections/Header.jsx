@@ -1,11 +1,12 @@
-import "../../styles/Header.scss";
 import MenuContainer from "../../containers/MenuContainer";
-import Title from "../Title";
 import Github from "../Github";
+import Title from "../Title";
+import PATH from "../../constants/PATH";
+import "../../styles/Header.scss";
 
 function Header() {
   return (
-    <header id="home">
+    <header id={PATH.INNER.HOME}>
       <MenuContainer />
       <Title />
       <Github />

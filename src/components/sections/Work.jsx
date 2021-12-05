@@ -1,5 +1,7 @@
-import WorkCard from "./WorkCard";
-import "../styles/Work.scss";
+import WorkCard from "../WorkCard";
+import SectionWrapper from "../SectionWrapper";
+import PATH from "../../constants/PATH";
+import "../../styles/Work.scss";
 
 function Work(props) {
   const { works, page, setPage } = props;
@@ -9,8 +11,7 @@ function Work(props) {
   };
 
   return (
-    <section className="work-wrapper" id="work">
-      <h1 className="title">WORK</h1>
+    <SectionWrapper className="work-wrapper" title="WORK" id={PATH.INNER.WORK}>
       <div className="contents">
         <div className="works">
           {works.map((work, idx) => (
@@ -44,7 +45,7 @@ function Work(props) {
           </div>
         </div>
       </div>
-    </section>
+    </SectionWrapper>
   );
 }
 
