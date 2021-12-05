@@ -1,34 +1,32 @@
 @import "./variables.scss";
 
 .menu-wrapper {
-  left: $default-padding * 0.5;
-  top: $default-padding * 0.5 + 0.5;
-
   position: fixed;
-  z-index: $menu-z-index + 1;
+  top: 4rem * 0.5 + 0.5;
+  left: 4rem * 0.5;
+  z-index: $z-index-primary + 1;
 
   .menu-icon {
-    left: 0;
-    right: 0;
-    z-index: $menu-z-index + 1;
     $menu-icon-transition: 0.5s;
     $menu-icon-top: 50%;
 
+    position: relative;
+    left: 0;
+    right: 0;
     width: 2rem;
     height: 2rem;
-
-    position: relative;
+    z-index: $z-index-primary + 1;
     cursor: pointer;
     transition: $menu-icon-transition;
 
     &::before,
     &::after {
       content: "";
-      width: 100%;
-      height: 0.2rem;
       position: absolute;
       left: 0;
-      background-color: $secondary-font-color;
+      width: 100%;
+      height: 0.2rem;
+      background-color: $secondary-color;
       transition: $menu-icon-transition;
     }
 
@@ -42,6 +40,7 @@
 
     &.close {
       $degree: 45deg;
+
       &::before {
         transform: rotate($degree);
       }
@@ -54,15 +53,15 @@
   .menu {
     $width: 25rem;
 
-    width: $width;
-    height: 100vh;
     position: fixed;
     top: 0;
     left: 0;
-    z-index: $menu-z-index;
-    background-color: #fcfbfa;
-    transition: 0.5s;
+    width: $width;
+    height: 100vh;
+    background-color: $color-white;
+    z-index: $z-index-primary;
     transform: translateX($width * -1);
+    transition: 0.5s;
 
     &.show {
       transform: translateX(0);
@@ -71,21 +70,21 @@
     ul {
       $font-size: 2.5rem;
 
-      width: 100%;
-      height: 50%;
-      list-style: none;
       position: absolute;
       top: 0;
       bottom: 0;
-      margin: auto;
+      width: 100%;
+      height: 50%;
       padding-left: 0;
+      margin: auto;
       font-size: $font-size;
       text-align: center;
+      list-style: none;
 
       li {
+        opacity: 0.6;
         margin-top: $font-size;
         cursor: pointer;
-        opacity: 0.6;
         transition: 0.3s;
 
         &:first-child {
@@ -103,13 +102,14 @@
 #modal-root {
   .background {
     display: none;
-    width: 100%;
-    height: 100%;
     position: fixed;
     top: 0;
     left: 0;
-    background-color: rgba(0, 0, 0, 0.5);
-    z-index: $menu-z-index - 1;
+    width: 100%;
+    height: 100%;
+    background-color: $modal-background-color;
+    z-index: $z-index-primary - 1;
+
     &.show {
       display: block;
     }

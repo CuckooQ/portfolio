@@ -2,13 +2,13 @@ import { useState } from "react";
 import "../styles/Card.scss";
 
 function Card(props) {
-  const [showTooltip, setTooltip] = useState(false);
+  const [showTooltip, setShowTooltip] = useState(false);
   const { tooltips } = props;
 
   return (
     <div
       className={`card ${tooltips ? "tooltips" : ""}`}
-      onClick={() => setTooltip(!showTooltip)}
+      onClick={() => setShowTooltip(!showTooltip)}
     >
       <div className="content">{props.children}</div>
       {tooltips && <div className="tooltip-alert">i</div>}

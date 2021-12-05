@@ -59,6 +59,7 @@ const Scene = () => {
   const ref = useRef();
   useFrame(({ clock }) => (ref.current.uTime = clock.getElapsedTime()));
   const [image] = useLoader(THREE.TextureLoader, [
+    // Just to Support Localhost
     window.location.hostname !== "localhost"
       ? `https://${window.location.host}/images/wavey.jpg`
       : `http://${window.location.host}/images/wavey.jpg`,

@@ -2,7 +2,7 @@ import ModalPortals from "./ModalPortals";
 import "../styles/Menu.scss";
 
 function Menu(props) {
-  const { menuList, isOpen, toggleMenu } = props;
+  const { isOpen, menuList, toggleMenu } = props;
 
   return (
     <div className="menu-wrapper">

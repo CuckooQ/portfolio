@@ -1,46 +1,46 @@
 @import "./variables.scss";
 
 footer {
+  padding: 1rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: $reverse-background-color;
-  color: $secondary-font-color;
   font-size: 1rem;
-  padding: 1rem;
+  color: $secondary-color;
+  background-color: $default-color;
 
-  @media (max-width: $screen-size-tablet) {
+  @media (max-width: $viewport-size-tablet) {
     font-size: 0.8rem;
   }
 
-  @media (max-width: $screen-size-mobile) {
+  @media (max-width: $viewport-size-mobile) {
+    border-top: 1px solid #{$secondary-color};
     flex-direction: column;
     justify-content: center;
-    border-top: 1px solid #{$secondary-font-color};
     line-height: 1.4rem;
   }
 
-  .line {
+  > .line {
     width: 65%;
     height: 0.1rem;
-    background-color: $secondary-font-color;
+    background-color: $secondary-color;
 
-    @media (max-width: $screen-size-tablet) {
+    @media (max-width: $viewport-size-tablet) {
       width: 50%;
     }
 
-    @media (max-width: $screen-size-mobile) {
+    @media (max-width: $viewport-size-mobile) {
       display: none;
     }
   }
 
-  .right {
+  > .right {
     :last-child {
       padding-left: 1rem;
-      color: $reverse-font-color;
+      color: $default-color-reverse;
       font-weight: bold;
 
-      @media (max-width: $screen-size-mobile) {
+      @media (max-width: $viewport-size-mobile) {
         padding-left: 0.5rem;
       }
     }

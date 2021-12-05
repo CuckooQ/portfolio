@@ -1,10 +1,11 @@
+import URL from "../constants/URL";
 import "../styles/GithubBtn.scss";
 
 function GithubBtn() {
   return (
     <a
       className="github-btn"
-      href="https://github.com/CuckooQ"
+      href={URL.GITHUB}
       target="_blank"
       rel="noreferrer"
     >

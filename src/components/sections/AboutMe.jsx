@@ -1,13 +1,18 @@
-import Card from "./Card";
-import Rotate from "./Rotate";
-import "../styles/AboutMe.scss";
+import Card from "../Card";
+import Rotate from "../Rotate";
+import SectionWrapper from "../SectionWrapper";
+import PATH from "../../constants/PATH";
+import "../../styles/AboutMe.scss";
 
 function AboutMe(props) {
-  const { educations, certificates, aboutContent, skills } = props;
+  const { aboutContent, certificates, educations, skills } = props;
 
   return (
-    <section className="about-me-wrapper" id="about">
-      <h1 className="title">ABOUT ME</h1>
+    <SectionWrapper
+      className="about-me-wrapper"
+      title="ABOUT ME"
+      id={PATH.INNER.ABOUT}
+    >
       <div className="contents">
         <span className="content">{aboutContent}</span>
         <div className="skills-wrapper">
@@ -34,7 +39,7 @@ function AboutMe(props) {
             })}
         </div>
       </div>
-    </section>
+    </SectionWrapper>
   );
 }
 

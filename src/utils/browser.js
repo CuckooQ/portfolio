@@ -3,7 +3,7 @@ export const BROWSER = {
   FIREFOX: "Firefox",
   EDGE: "Edge",
   Safari: "Safari",
-  UNDEFINED: "undefined",
+  UNDEFINED: "Undefined",
 };
 
 export function getBrowser() {

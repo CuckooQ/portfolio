@@ -4,11 +4,11 @@
   $btn-size: 4rem;
 
   position: absolute;
-  top: $default-padding * 0.5;
+  top: 4rem * 0.5;
   right: 0;
   transform: translateX($btn-size * 0.5);
 
-  @media (max-width: $screen-size-mobile) {
+  @media (max-width: $viewport-size-mobile) {
     display: none;
   }
 }

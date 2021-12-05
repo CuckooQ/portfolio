@@ -1,22 +1,23 @@
 @import "./variables.scss";
 
 .fade-in-wrapper {
-  $time: 2s;
-
   position: relative;
 
   .fade-in {
+    opacity: 1;
     position: absolute;
     top: 0;
     bottom: 0;
     left: 0;
     width: 100%;
-    opacity: 1;
-    transition: transform $time ease-in-out, opacity $time * 10;
-    background: $primary-background-color;
-    z-index: $fade-in-z-index;
+    background: $default-color-reverse;
+    z-index: $z-index-secondary;
+    transition: transform $delay-fade-in ease-in-out,
+      opacity $delay-fade-in * 10;
 
     &.show {
+      opacity: 0;
+
       &.right {
         transform: translateX(100rem);
       }
@@ -24,7 +25,6 @@
       &.left {
         transform: translateX(-100rem);
       }
-      opacity: 0;
     }
 
     &.delay-1 {

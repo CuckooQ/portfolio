@@ -2,14 +2,14 @@
 
 header {
   position: relative;
+  padding: 4rem;
+  padding-top: 4rem * 0.5;
+  margin-bottom: 2rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: $default-padding;
-  padding-top: $default-padding * 0.5;
-  margin-bottom: 2rem;
 
-  @media (max-width: $screen-size-mobile) {
+  @media (max-width: $viewport-size-mobile) {
     padding: 1rem;
   }
 }

@@ -1,41 +1,37 @@
 @import "./variables.scss";
 
 .visual-wrapper {
-  height: 90vh;
   position: relative;
-  padding: $default-padding;
-  margin-bottom: $default-margin-bottom;
+  padding: 4rem;
+  margin-bottom: 20rem;
+  height: 90vh;
 
-  @media (max-width: $screen-size-mobile) {
+  @media (max-width: $viewport-size-mobile) {
     margin-bottom: 10rem;
   }
 
   .text-wrapper {
-    width: fit-content;
-    height: fit-content;
-    white-space: pre-wrap;
     position: absolute;
     left: 0;
     right: 0;
     top: 0;
     bottom: 0;
     margin: auto;
+    width: fit-content;
+    height: fit-content;
     font-size: 3rem;
     font-weight: bold;
     font-style: italic;
     line-height: 4rem;
-    color: $reverse-font-color;
+    white-space: pre-wrap;
+    color: $default-color-reverse;
 
-    .text {
-      display: block;
-    }
-
-    @media (max-width: $screen-size-tablet) {
+    @media (max-width: $viewport-size-tablet) {
       font-size: 2rem;
       line-height: 3rem;
     }
 
-    @media (max-width: $screen-size-mobile) {
+    @media (max-width: $viewport-size-mobile) {
       font-size: 1.3rem;
       line-height: 2.3rem;
       text-align: center;
@@ -44,20 +40,20 @@
 
   .visual {
     position: absolute !important;
-    max-width: 90%;
-    height: inherit !important;
     left: 0;
     right: 0;
     margin: 0 auto;
+    max-width: 90%;
+    height: inherit !important;
     background-color: transparent;
 
-    @media (max-width: $screen-size-mobile) {
+    @media (max-width: $viewport-size-mobile) {
       max-width: 70vh;
       max-height: 50vh;
     }
   }
 
-  @media (max-width: $screen-size-mobile) {
+  @media (max-width: $viewport-size-mobile) {
     max-width: 70vh;
     max-height: 50vh;
   }

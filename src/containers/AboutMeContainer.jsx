@@ -1,5 +1,5 @@
 import { useSelector } from "react-redux";
-import AboutMe from "../components/AboutMe";
+import AboutMe from "../components/sections/AboutMe";
 
 function AboutMeContainer() {
   const { aboutContent, educations, certificates, skills } = useSelector(

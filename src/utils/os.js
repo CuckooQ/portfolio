@@ -4,7 +4,7 @@ export const OS = {
   IOS: "IOS",
   MAC: "MAC",
   LINUX: "Linux",
-  UNDEFINED: "undefined",
+  UNDEFINED: "Undefined",
 };
 
 export function getOS() {

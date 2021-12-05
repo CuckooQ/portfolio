@@ -1,19 +1,19 @@
-// import WaveyContainer from "../../containers/WaveyContainer";
 import AboutMeContainer from "../../containers/AboutMeContainer";
 import WorkContainer from "../../containers/WorkContainer";
-import Visual from "../Visual";
-import Contact from "../Contact";
+import Contact from "./Contact";
 import FadeIn from "../FadeIn";
+import Visual from "./Visual";
+
 function Main() {
   return (
     <main>
-      <FadeIn direction={"right"} delay={3} auto={true}>
+      <FadeIn delay={3} auto={true}>
         <Visual />
       </FadeIn>
-      <FadeIn direction={"right"}>
+      <FadeIn>
         <AboutMeContainer />
       </FadeIn>
-      <FadeIn direction={"right"}>
+      <FadeIn>
         <WorkContainer />
       </FadeIn>
       <Contact />

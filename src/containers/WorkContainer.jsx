@@ -1,7 +1,7 @@
-import { useSelector, useDispatch } from "react-redux";
 import { useCallback } from "react";
+import { useSelector, useDispatch } from "react-redux";
 import { movePage } from "../redux/modules/work";
-import Work from "../components/Work";
+import Work from "../components/sections/Work";
 
 function WorkContainer() {
   const { works, page } = useSelector((state) => state.work);

@@ -1,41 +1,21 @@
 @import "./variables.scss";
 
 .about-me-wrapper {
-  position: relative;
-  padding: $default-padding;
-  margin-bottom: $default-margin-bottom;
-
-  @media (max-width: 600px) {
-    margin-bottom: 10rem;
-  }
-
-  .title {
-    font-size: $primary-title-font-size;
-    padding-bottom: $default-padding-bottom;
-    margin-top: 0;
-    margin-bottom: 0;
-
-    @media (max-width: $screen-size-mobile) {
-      font-size: $secondary-title-font-size;
-      padding-bottom: 0;
-    }
-  }
-
-  .contents {
+  > .contents {
+    padding-bottom: 6rem;
     display: flex;
     justify-content: center;
-    padding-bottom: $default-padding-bottom;
     filter: grayscale(1) opacity(0.8);
     transition: 0.8s;
 
-    @media (max-width: $screen-size-tablet) {
-      flex-direction: column;
-      align-items: center;
-      padding-bottom: 4rem;
-    }
-
     &:hover {
       filter: grayscale(0) opacity(1);
+    }
+
+    @media (max-width: $viewport-size-tablet) {
+      padding-bottom: 4rem;
+      flex-direction: column;
+      align-items: center;
     }
 
     .skills-wrapper {
@@ -43,7 +23,7 @@
       width: 50%;
       height: 25rem;
 
-      @media (max-width: $screen-size-tablet) {
+      @media (max-width: $viewport-size-tablet) {
         padding-left: 0;
         width: 100%;
       }
@@ -53,44 +33,44 @@
       }
     }
 
-    .content {
+    > .content {
       font-weight: bold;
       line-height: 3rem;
       white-space: pre-wrap;
       word-break: keep-all;
       text-align: center;
-      background-image: url("/assets/images/about_bg.png");
+      background-image: url("/assets/images/about-bg.png");
       background-size: contain;
       background-repeat: no-repeat;
       background-position: center;
       overflow: hidden;
 
-      @media (max-width: $screen-size-tablet) {
+      @media (max-width: $viewport-size-tablet) {
         padding: 4rem 0 4rem 0;
       }
 
-      @media (max-width: $screen-size-mobile) {
+      @media (max-width: $viewport-size-mobile) {
         background: none;
       }
     }
   }
 
-  .sub-contents {
-    max-width: 100%;
+  > .sub-contents {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
+    max-width: 100%;
 
-    @media (max-width: $screen-size-tablet) {
+    @media (max-width: $viewport-size-tablet) {
       flex-direction: column;
       flex-wrap: nowrap;
     }
 
     .content {
-      min-width: 50%;
       display: flex;
       flex-direction: column;
       align-items: center;
+      min-width: 50%;
       text-align: center;
 
       > * {
@@ -98,9 +78,9 @@
       }
 
       > :first-child {
-        display: inline;
-        font-size: $primary-sub-title-font-size;
         border-bottom: 0.1rem solid;
+        display: inline;
+        font-size: $title-font-size-small;
       }
     }
   }

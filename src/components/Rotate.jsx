@@ -1,26 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Canvas } from "@react-three/fiber";
-import { Text, OrbitControls } from "@react-three/drei";
-import SIZE from "../constants/size";
-
-const positions = [
-  [-1.5, 0, 0],
-  [1.5, 0, 0],
-  [0, 0, -1.5],
-  [0, 0, 1.5],
-  [0, 1.5, 0],
-  [0, -1.5, 0],
-  [1, 1, 0],
-  [-1, -1, 0],
-  [-1, 0, -1],
-  [1, -1, 0],
-  [-1, 0, 1],
-  [1, 0, 1],
-  [0, 1, -1],
-  [1, 0, -1],
-  [-1, 1, 0],
-  [0.5, 0.5, 0.5],
-];
+import { OrbitControls, Text } from "@react-three/drei";
+import { VIEWPORT_SIZE, getViewportSize } from "../utils/viewportSize";
 
 function Word({ position, text }) {
   return (
@@ -33,6 +14,25 @@ function Word({ position, text }) {
 }
 
 function Scene({ words }) {
+  const positions = [
+    [-1.5, 0, 0],
+    [1.5, 0, 0],
+    [0, 0, -1.5],
+    [0, 0, 1.5],
+    [0, 1.5, 0],
+    [0, -1.5, 0],
+    [1, 1, 0],
+    [-1, -1, 0],
+    [-1, 0, -1],
+    [1, -1, 0],
+    [-1, 0, 1],
+    [1, 0, 1],
+    [0, 1, -1],
+    [1, 0, -1],
+    [-1, 1, 0],
+    [0.5, 0.5, 0.5],
+  ];
+
   return (
     <group>
       {words.map((word, idx) => {
@@ -46,9 +46,9 @@ function Rotate({ words, className }) {
   const defaultFov = 40;
   const [fov, setFov] = useState(defaultFov);
   useEffect(() => {
-    window.innerWidth > SIZE.TABLET_SIZE && setFov(defaultFov);
-    window.innerWidth <= SIZE.TABLET_SIZE && setFov(defaultFov + 5);
-    window.innerWidth <= SIZE.MOBILE_SIZE && setFov(defaultFov + 10);
+    getViewportSize() > VIEWPORT_SIZE.TABLET && setFov(defaultFov);
+    getViewportSize() <= VIEWPORT_SIZE.TABLET && setFov(defaultFov + 5);
+    getViewportSize() <= VIEWPORT_SIZE.MOBILE && setFov(defaultFov + 10);
   }, []);
 
   return (

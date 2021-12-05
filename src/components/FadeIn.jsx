@@ -1,24 +1,35 @@
-import { useRef, useState, useEffect } from "react";
+import { useEffect, useRef, useState } from "react";
 import "../styles/FadeIn.scss";
 
-function FadeIn({ children, direction, delay, auto = false }) {
+export const DIRECTION = {
+  LEFT: "left",
+  RIGHT: "right",
+};
+
+function FadeIn({
+  children,
+  direction = DIRECTION.RIGHT,
+  delay,
+  auto = false,
+}) {
   const ref = useRef();
-  const [show, setShow] = useState(false);
-  const [delayClassName, setDelayClassName] = useState(0);
+  const [showClassName, setShowClassName] = useState("");
+  const [delayClassName, setDelayClassName] = useState("");
+
   useEffect(() => {
     if (!auto) {
       const observer = new IntersectionObserver((entries, observer) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             observer.unobserve(entry.target);
-            setShow(true);
+            setShowClassName("show");
           }
         });
       });
       observer.observe(ref.current);
     } else {
       setTimeout(() => {
-        setShow(true);
+        setShowClassName("show");
       }, 500);
     }
   }, [auto]);
@@ -30,9 +41,7 @@ function FadeIn({ children, direction, delay, auto = false }) {
     <div className="fade-in-wrapper" ref={ref}>
       {children}
       <div
-        className={`fade-in ${direction ? direction : ""} ${
-          show ? "show" : ""
-        } ${delayClassName}`}
+        className={`fade-in ${direction} ${showClassName} ${delayClassName}`}
       ></div>
     </div>
   );
