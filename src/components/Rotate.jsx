@@ -1,11 +1,16 @@
-import React, { useEffect, useState } from "react";
-import { Canvas } from "@react-three/fiber";
+import React, { useEffect, useState, useRef } from "react";
+import { Canvas, useFrame } from "@react-three/fiber";
 import { OrbitControls, Text } from "@react-three/drei";
 import { VIEWPORT_SIZE, getViewportSize } from "../utils/viewportSize";
 
 function Word({ position, text }) {
+  const ref = useRef();
+  useFrame(() => {
+    ref.current.rotation.y += -0.0035;
+  });
+
   return (
-    <mesh position={position}>
+    <mesh ref={ref} position={position}>
       <Text scale={[2, 2, 2]} color={"#EC2D2D"} dashed={true}>
         {text}
       </Text>
@@ -54,7 +59,7 @@ function Rotate({ words, className }) {
   return (
     <Canvas className={className} camera={{ fov, position: [0, 0, 5] }}>
       <Scene words={words} />
-      <OrbitControls autoRotate={true} enableZoom={false} />
+      <OrbitControls autoRotate={true} rotateSpeed={1} enableZoom={false} />
     </Canvas>
   );
 }
