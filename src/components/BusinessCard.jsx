@@ -6,7 +6,14 @@ import "../styles/BusinessCard.scss";
 function BusinessCard() {
   const emailRef = useRef();
   const emailTooltipRef = useRef();
+
   const [isFlipped, setFlipped] = useState(false);
+
+  const className = `business-card ${isFlipped ? "flipped" : ""}`;
+
+  function handleClick() {
+    setFlipped(!isFlipped);
+  }
 
   function copyEmail(e) {
     e.stopPropagation();
@@ -25,10 +32,7 @@ function BusinessCard() {
   }
 
   return (
-    <div
-      className={`business-card ${isFlipped ? "flipped" : ""}`}
-      onClick={() => setFlipped(!isFlipped)}
-    >
+    <div className={className} onClick={handleClick}>
       <div className="front">
         <div className="layer">
           <h1>CUCKOOQ</h1>

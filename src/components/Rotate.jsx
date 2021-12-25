@@ -5,13 +5,14 @@ import { VIEWPORT_SIZE, getViewportSize } from "../utils/viewportSize";
 
 function Word({ position, text }) {
   const ref = useRef();
+
   useFrame(() => {
     ref.current.rotation.y += -0.0035;
   });
 
   return (
-    <mesh ref={ref} position={position}>
-      <Text scale={[2, 2, 2]} color={"#EC2D2D"} dashed={true}>
+    <mesh position={position} ref={ref}>
+      <Text color={"#EC2D2D"} dashed={true} scale={[2, 2, 2]}>
         {text}
       </Text>
     </mesh>
@@ -41,15 +42,16 @@ function Scene({ words }) {
   return (
     <group>
       {words.map((word, idx) => {
-        return <Word position={positions[idx]} text={word} key={idx} />;
+        return <Word key={idx} position={positions[idx]} text={word} />;
       })}
     </group>
   );
 }
 
-function Rotate({ words, className }) {
+function Rotate({ className, words }) {
   const defaultFov = 40;
   const [fov, setFov] = useState(defaultFov);
+
   useEffect(() => {
     getViewportSize() > VIEWPORT_SIZE.TABLET && setFov(defaultFov);
     getViewportSize() <= VIEWPORT_SIZE.TABLET && setFov(defaultFov + 5);
@@ -59,7 +61,7 @@ function Rotate({ words, className }) {
   return (
     <Canvas className={className} camera={{ fov, position: [0, 0, 5] }}>
       <Scene words={words} />
-      <OrbitControls autoRotate={true} rotateSpeed={1} enableZoom={false} />
+      <OrbitControls autoRotate={true} enableZoom={false} rotateSpeed={1} />
     </Canvas>
   );
 }

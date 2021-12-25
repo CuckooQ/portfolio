@@ -2,50 +2,55 @@ import { useState } from "react";
 import "../styles/Card.scss";
 
 function Card(props) {
+  const { children, tooltips } = props;
   const [showTooltip, setShowTooltip] = useState(false);
-  const { tooltips } = props;
+
+  const className = `card ${tooltips ? "tooltips" : ""}`;
+
+  function handleClick() {
+    setShowTooltip(!showTooltip);
+  }
 
   return (
-    <div
-      className={`card ${tooltips ? "tooltips" : ""}`}
-      onClick={() => setShowTooltip(!showTooltip)}
-    >
-      <div className="content">{props.children}</div>
-      {tooltips && <div className="tooltip-alert">i</div>}
-      {tooltips &&
-        tooltips.map(({ text, link }, idx) => {
-          let classes = "tooltip ";
-          switch (idx) {
-            case 0: {
-              classes += "right";
-              break;
+    <div className={className} onClick={handleClick}>
+      <div className="content">{children}</div>
+      {tooltips ? <div className="tooltip-alert">i</div> : null}
+      {tooltips
+        ? tooltips.map(({ text, link }, idx) => {
+            let className = "tooltip ";
+            switch (idx) {
+              case 0: {
+                className += "right";
+                break;
+              }
+              case 1: {
+                className += "left";
+                break;
+              }
+              case 2: {
+                className += "left bottom";
+                break;
+              }
+              case 3: {
+                className += "right bottom";
+                break;
+              }
+              default:
             }
-            case 1: {
-              classes += "left";
-              break;
-            }
-            case 2: {
-              classes += "left bottom";
-              break;
-            }
-            case 3: {
-              classes += "right bottom";
-              break;
-            }
-            default:
-          }
-          return (
-            <div className={classes + (showTooltip ? " show" : "")} key={idx}>
-              {link ? (
-                <a href={link} target="_blank" rel="noreferrer">
-                  {text}
-                </a>
-              ) : (
-                <span>{text}</span>
-              )}
-            </div>
-          );
-        })}
+            className += showTooltip ? " show" : "";
+            return (
+              <div className={className} key={idx}>
+                {link ? (
+                  <a href={link} rel="noreferrer" target="_blank">
+                    {text}
+                  </a>
+                ) : (
+                  <span>{text}</span>
+                )}
+              </div>
+            );
+          })
+        : null}
     </div>
   );
 }

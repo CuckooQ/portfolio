@@ -1,6 +1,6 @@
 import "../styles/Button.scss";
 
-function Button({ className, children, click }) {
+function Button({ children, className, click }) {
   return (
     <button className={`btn ${className}`} onClick={click}>
       {children}

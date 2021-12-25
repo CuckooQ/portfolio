@@ -5,7 +5,7 @@ import "../styles/Github.scss";
 function Github() {
   return (
     <div className="github-wrapper">
-      <FadeIn delay={3} auto={true}>
+      <FadeIn auto={true} delay={3}>
         <GithubBtn />
       </FadeIn>
     </div>
