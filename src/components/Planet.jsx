@@ -9,6 +9,7 @@ const DISTANCE = 100;
 
 function Satellite() {
   const ref = useRef();
+
   const timeMod = useMemo(() => random(0.1, 4, true), []);
   const position = useMemo(() => {
     const posMax = DISTANCE * 0.8;
@@ -28,10 +29,10 @@ function Satellite() {
     <mesh position={position} ref={ref}>
       <sphereGeometry args={[1, 30, 30]} attach="geometry" />
       <meshStandardMaterial
-        color={COLOR}
-        roughness={0.6}
-        metalness={0.1}
         attach="material"
+        color={COLOR}
+        metalness={0.1}
+        roughness={0.6}
       />
     </mesh>
   );
@@ -39,7 +40,9 @@ function Satellite() {
 
 function Satellites() {
   const ref = useRef();
+
   const cnt = 300;
+
   useFrame(() => {
     ref.current.rotation.y += 0.005;
   });
@@ -47,7 +50,7 @@ function Satellites() {
   return (
     <group ref={ref}>
       {Array(cnt)
-        .fill(0)
+        .fill()
         .map((_, idx) => (
           <Satellite key={idx} />
         ))}
@@ -60,7 +63,7 @@ function FixedStar() {
     <group>
       <mesh>
         <sphereBufferGeometry args={[15, 30, 30]} attach="geometry" />
-        <meshBasicMaterial color={COLOR} attach="material" />
+        <meshBasicMaterial attach="material" color={COLOR} />
       </mesh>
       <ambientLight intensity={1} />
       <spotLight intensity={1.5} position={[0, 0, 1000]} />
@@ -73,10 +76,10 @@ function Universe() {
     <mesh>
       <sphereBufferGeometry args={[DISTANCE, 32, 32]} attach="geometry" />
       <meshStandardMaterial
-        color={COLOR}
-        side={BackSide}
-        metalness={0.4}
         attach="material"
+        color={COLOR}
+        metalness={0.4}
+        side={BackSide}
       />
     </mesh>
   );
@@ -95,8 +98,8 @@ function Scene() {
 function Planet({ className }) {
   return (
     <Canvas
-      className={`planet ${className}`}
       camera={{ fov: 75, position: [0, 0, DISTANCE] }}
+      className={`planet ${className}`}
     >
       <Scene />
     </Canvas>

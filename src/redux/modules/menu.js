@@ -12,10 +12,10 @@ export function toggleMenu() {
 const initState = {
   isOpen: false,
   menuList: [
-    { id: `${PATH.INNER.HOME}`, text: "HOME" },
-    { id: `${PATH.INNER.ABOUT}`, text: "ABOUT ME" },
-    { id: `${PATH.INNER.WORK}`, text: "WORK" },
-    { id: `${PATH.INNER.CONTACT}`, text: "CONTACT" },
+    { id: PATH.INNER.HOME, text: "HOME" },
+    { id: PATH.INNER.ABOUT, text: "ABOUT ME" },
+    { id: PATH.INNER.WORK, text: "WORK" },
+    { id: PATH.INNER.CONTACT, text: "CONTACT" },
   ],
 };
 function reducer(prevState = initState, action) {

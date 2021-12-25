@@ -14,15 +14,21 @@ function Visual() {
       ) : (
         <Wave className="visual" />
       )}
-      <div className="text-wrapper">
-        <div>HI,</div>
-        <div>I'M JAEYONG CHO,</div>
-        <div>FRONT-END DEVELOPER.</div>
-        <div>I'M PASSIONATE TO DEVELOPMENT.</div>
-        <div>I'M NOT AFRAID OF CHALLENGES.</div>
-        <div>I LIKE A CAT, GRAPEFRUIT, AND MUSIC.</div>
-        <div>LET'S GO PLUS ULTRA!</div>
-      </div>
+      <p className="text-wrapper">
+        <span>HI,</span>
+        <br />
+        <span>I'M JAEYONG CHO,</span>
+        <br />
+        <span>FRONT-END DEVELOPER.</span>
+        <br />
+        <span>I'M PASSIONATE TO DEVELOPMENT.</span>
+        <br />
+        <span>I'M NOT AFRAID OF CHALLENGES.</span>
+        <br />
+        <span>I LIKE A CAT, GRAPEFRUIT, AND MUSIC.</span>
+        <br />
+        <span>LET'S GO PLUS ULTRA!</span>
+      </p>
     </SectionWrapper>
   );
 }

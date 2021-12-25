@@ -4,20 +4,19 @@ import "../styles/Menu.scss";
 function Menu(props) {
   const { isOpen, menuList, toggleMenu } = props;
 
+  const menuIconClassName = `menu-icon ${isOpen ? "close" : ""}`;
+  const menuClassName = `menu ${isOpen ? "show" : ""}`;
+  const modalClassName = `background ${isOpen ? "show" : ""}`;
+
   return (
     <div className="menu-wrapper">
-      <div
-        className={`menu-icon ${isOpen && "close"}`}
-        onClick={() => toggleMenu()}
-      ></div>
-      <div className={`menu ${isOpen && "show"}`}>
+      <div className={menuIconClassName} onClick={toggleMenu}></div>
+      <div className={menuClassName}>
         <ul>
-          {menuList.map((menu) => {
+          {menuList.map(({ id, text }) => {
             return (
-              <li key={menu.id}>
-                <a href={menu.id} onClick={() => toggleMenu()}>
-                  {menu.text}
-                </a>
+              <li key={id} onClick={toggleMenu}>
+                <a href={`#${id}`}>{text}</a>
               </li>
             );
           })}
@@ -25,10 +24,7 @@ function Menu(props) {
       </div>
 
       <ModalPortals>
-        <div
-          className={`background ${isOpen && "show"}`}
-          onClick={() => toggleMenu()}
-        ></div>
+        <div className={modalClassName} onClick={toggleMenu}></div>
       </ModalPortals>
     </div>
   );

@@ -57,7 +57,9 @@ extend({ WaveShaderMaterial });
 
 const Scene = () => {
   const ref = useRef();
+
   useFrame(({ clock }) => (ref.current.uTime = clock.getElapsedTime()));
+
   const [image] = useLoader(THREE.TextureLoader, [
     // Just to Support Localhost
     window.location.hostname !== "localhost"
@@ -68,7 +70,7 @@ const Scene = () => {
   return (
     <mesh>
       <planeBufferGeometry args={[1, 0.6, 16, 16]} />
-      <waveShaderMaterial ref={ref} uTime={0} uTexture={image} />
+      <waveShaderMaterial ref={ref} uTexture={image} uTime={0} />
     </mesh>
   );
 };
@@ -76,9 +78,9 @@ const Scene = () => {
 const Wave = ({ className }) => {
   return (
     <Canvas
-      linear
-      className={className}
       camera={{ fov: 7, position: [2, 3, 4] }}
+      className={className}
+      linear
     >
       <Suspense fallback={null}>
         <Scene />

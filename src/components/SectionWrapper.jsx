@@ -1,18 +1,19 @@
 import "../styles/SectionWrapper.scss";
 
 function SectionWrapper({
-  className,
-  title,
-  reverse = false,
   children,
+  className,
+  reverse = false,
+  title,
   ...args
 }) {
+  const sectionClassName = `section-wrapper ${className} ${
+    reverse ? "reverse" : ""
+  }`;
+
   return (
-    <section
-      className={`section-wrapper ${className} ${reverse ? "reverse" : ""}`}
-      {...args}
-    >
-      {title && <h1 className="title">{title}</h1>}
+    <section className={sectionClassName} {...args}>
+      {title ? <h1 className="title">{title}</h1> : null}
       {children}
     </section>
   );

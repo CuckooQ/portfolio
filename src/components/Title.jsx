@@ -5,15 +5,15 @@ import "../styles/Title.scss";
 function Title() {
   return (
     <a className="title-wrapper" href={PATH.HOME} target="_self">
-      <FadeIn direction={DIRECTION.LEFT} auto={true}>
-        <img className="title-logo" src="/images/logo.png" alt="Logo" />
+      <FadeIn auto={true} direction={DIRECTION.LEFT}>
+        <img alt="Logo" className="title-logo" src="/images/logo.png" />
       </FadeIn>
 
       <span className="title">
-        <FadeIn delay={1} auto={true}>
+        <FadeIn auto={true} delay={1}>
           <span>JAEYONG CHO</span>
         </FadeIn>
-        <FadeIn delay={2} auto={true}>
+        <FadeIn auto={true} delay={2}>
           <span>Front-end Developer</span>
         </FadeIn>
       </span>

@@ -7,16 +7,18 @@ export const DIRECTION = {
 };
 
 function FadeIn({
+  auto = false,
   children,
   direction = DIRECTION.RIGHT,
   delay,
-  auto = false,
 }) {
   const ref = useRef();
+
   const [showClassName, setShowClassName] = useState("");
   const [delayClassName, setDelayClassName] = useState("");
 
   useEffect(() => {
+    let timer;
     if (!auto) {
       const observer = new IntersectionObserver((entries, observer) => {
         entries.forEach((entry) => {
@@ -28,10 +30,13 @@ function FadeIn({
       });
       observer.observe(ref.current);
     } else {
-      setTimeout(() => {
+      timer = setTimeout(() => {
         setShowClassName("show");
       }, 500);
     }
+    return () => {
+      clearTimeout(timer);
+    };
   }, [auto]);
   useEffect(() => {
     delay && setDelayClassName(`delay-${delay}`);

@@ -15,7 +15,7 @@ function QRCode() {
 
   return (
     <div className="qr-code">
-      <img src={src} alt="QR CODE"></img>
+      <img alt="QR CODE" src={src}></img>
     </div>
   );
 }

@@ -6,10 +6,10 @@ function GithubBtn() {
     <a
       className="github-btn"
       href={URL.GITHUB}
-      target="_blank"
       rel="noreferrer"
+      target="_blank"
     >
-      <img src="/images/github.png" alt="Github" />
+      <img alt="Github" src="/images/github.png" />
     </a>
   );
 }

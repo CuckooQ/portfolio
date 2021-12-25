@@ -7,9 +7,9 @@ function Contact() {
   return (
     <SectionWrapper
       className="contact-wrapper"
-      title="CONTACT"
-      reverse={true}
       id={PATH.INNER.CONTACT}
+      reverse={true}
+      title="CONTACT"
     >
       <div className="contents">
         <BusinessCard />
