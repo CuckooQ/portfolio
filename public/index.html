@@ -47,6 +47,20 @@
       })(window,document,'script','dataLayer','GTM-5RCHK4S');
     </script>
     <!-- End Google Tag Manager -->
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-JWDGJ65CZL"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      const url = new URL(window.location.href);
+      const clientId = url.searchParams.get('clientId')
+      const sessionId = url.searchParams.get('sessionId')
+      gtag('js', new Date());
+      gtag('config', 'G-JWDGJ65CZL', {
+        'client_id': clientId,
+        'session_id': sessionId
+      });
+    </script>
     <title>
       프론트엔드 개발자 조재용 포트폴리오 | Frontend Developer Jaeyong Cho
       Portfolio
